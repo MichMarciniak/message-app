@@ -6,3 +6,5 @@ backend/data
 *.tfstate
 *.tfstate.backup
 *.tfvars
+
+ansible/inventory.ini
