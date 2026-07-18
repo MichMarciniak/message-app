@@ -95,3 +95,17 @@ Application URL: `https://localhost`
 docker compose -f dev-docker-compose.yml up --build [-d]
 ```
 
+## Cloud Deployment (Terraform + Ansible)
+
+This project includes IaC for deploying to Azure:
+
+- `terraform/` - provisions the Azure VM, networking and firewall rules.
+- `ansible/` - configures the VM (Docker, swap, secrets, SSL certs) and deployed the application via `docker compose`
+
+```bash
+cd terraform && terraform init && terraform apply
+cd ../ansible && ansible-playbook playbook.yml
+```
+
+>[!NOTE]
+> Before running Ansible, copy `ansible/inventory.ini.example` to `ansible/inventory.ini` and fill in the VM's public IP from Terraform output.

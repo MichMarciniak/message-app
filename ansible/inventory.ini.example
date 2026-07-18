@@ -1,0 +1,2 @@
+[app_servers]
+message-app-vm ansible_host=<VM_PUBLIC_IP> ansible_user=azureuser ansible_ssh_private_key_file=~/.ssh/azure_message_app
