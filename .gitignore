@@ -1,3 +1,8 @@
 *.env*
 *__pycache__*
 backend/data
+
+.terraform
+*.tfstate
+*.tfstate.backup
+*.tfvars
